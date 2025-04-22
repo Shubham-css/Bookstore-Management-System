@@ -1,0 +1,29 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Clone Code') {
+            steps {
+                echo 'Code is already present locally (skip this if using GitHub build trigger)'
+            }
+        }
+
+        stage('Install Dependencies') {
+            steps {
+                sh 'pip install -r requirements.txt'
+            }
+        }
+
+        stage('Run Migrations') {
+            steps {
+                sh 'python manage.py migrate'
+            }
+        }
+
+        stage('Run Server') {
+            steps {
+                sh 'python manage.py runserver 0.0.0.0:8000 &'
+            }
+        }
+    }
+}
