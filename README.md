@@ -43,20 +43,18 @@ The project is built from scratch with a clean DevOps setup using Docker and Jen
 
 ---
 
-## 🗃️ Project Folder
+##  🗃️ Description of Key Files and Folders
 
-bookstore/
-│
-├── bookstore/         # Django settings and root project
-├── store/             # App for books and cart logic
-├── templates/         # All HTML templates
-├── static/            # Static files like CSS (if any)
-├── Dockerfile         # For Docker image
-├── docker-compose.yml # Docker services
-├── Jenkinsfile        # Jenkins pipeline
-├── manage.py          # Django management script
-└── README.md          # This file
+- **bookstore/**: Contains the core settings of the Django project.
+- **store/**: Contains the main logic of the bookstore app, including models, views, forms, and templates.
+- **templates/**: Holds shared HTML templates for different parts of the project.
+- **static/**: Stores static resources such as CSS, JavaScript, and images.
+- **Dockerfile**: Contains instructions to build the Docker image for the project.
+- **docker-compose.yml**: Manages multi-container Docker applications, ensuring smooth service orchestration.
+- **Jenkinsfile**: Contains the pipeline configuration for Jenkins CI/CD integration.
+- **manage.py**: Django's management tool to run commands for migrations, testing, and starting the server.
 
+---
 
 📝 Notes
 ->🔒 CBV only, FBV strictly avoided
